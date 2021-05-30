@@ -26,7 +26,7 @@ namespace MyApplication
         // radius is radius of circle
         // center of circle is origin
         public double radius = 5;
-        public override void InObject()
+        public override void InObject()  //Method to check point lies InObject
         {
             if (((p_x - o_x) * (p_x - o_x) + (p_y - o_y) * (p_y - o_y)) <= (radius * radius))
                 Console.WriteLine("Given Point lies Inside the circle");
@@ -40,7 +40,7 @@ namespace MyApplication
     {
         // Triangle with coordinates origin, B, C
         public double B_x = 10, B_y = 30, C_x = 20, C_y = 0;
-        public override void InObject()
+        public override void InObject()   //Method to check point lies InObject
         {
             static double Area(double Ax, double Ay, double Bx, double By, double Cx, double Cy)
             {
@@ -61,7 +61,7 @@ namespace MyApplication
     {
         // defining rectangle with coordinates origin,B,C,D
         public double B_x = 0, B_y = 3, C_x = 5, C_y = 3, D_x = 5, D_y = 0;
-        public override void InObject()
+        public override void InObject()     //Method to check point lies InObject
         {
             static double Area(double Ax, double Ay, double Bx, double By, double Cx, double Cy)
             {
@@ -82,7 +82,7 @@ namespace MyApplication
 
     class CircleTranslation : Circle  // defining class for translated circle
     {
-        public void InTObject()
+        public void InTObject()   //Method to check point lies InTranslatedObject
         {
             o_x = o_x + T_x;
             o_y = o_y + T_y;
@@ -95,7 +95,7 @@ namespace MyApplication
 
     class TriangleTranslation : Triangle // defining class for rotated Triangle
     {
-        public void InTObject()
+        public void InTObject()    //Method to check point lies InTranslatedObject
         {
             o_x = o_x + T_x;
             o_y = o_y + T_y;
@@ -112,7 +112,7 @@ namespace MyApplication
 
     class RectangleTranslation : Rectangle // defining class for translated Rectangle
     {
-        public void InTObject()
+        public void InTObject()   //Method to check point lies InTranslatedObject
         {
             o_x = o_x + T_x;
             o_y = o_y + T_y;
@@ -131,7 +131,7 @@ namespace MyApplication
     // rotation of circle about center has no change in region
     class TriangleRotation : Triangle // class for rotated triangle
     {
-        public void InRObject()
+        public void InRObject()    //Method to check point lies InRotatedObject 
         {
             //double o_x_n = o_x * Math.Cos(theta) - o_y * Math.Sin(theta);
             //double o_y_n = o_x * Math.Sin(theta) + o_y * Math.Cos(theta);
@@ -154,7 +154,7 @@ namespace MyApplication
 
     class RectangleRotation : Rectangle  //class for rotated Rectangle
     {
-        public void InRObject() 
+        public void InRObject()      //Method to check point lies InRotatedObject
         {
             //double o_x_n = o_x * Math.Cos(theta) - o_y * Math.Sin(theta);
             //double o_y_n = o_x * Math.Sin(theta) + o_y * Math.Cos(theta);
